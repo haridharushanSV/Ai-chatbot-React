@@ -1,33 +1,30 @@
 import React, { useState } from 'react';
-import styles from './Login.module.css';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../firebase.js';
+import styles from './Signup.module.css';
 import { useNavigate } from 'react-router-dom'; // ✅ Correct import
 
-function Login() {
+function Signup() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
 
   const navigate = useNavigate(); // ✅ Hook to navigate programmatically
-  const handlesignup = () => {
-    navigate("/signup"); // ✅ Navigate to /signup
-    setMessage(""); // Clear message on redirect
-  }
-  const handleLogin = async () => {
+ 
+  const handlesignup = async () => {
     try {
-      await signInWithEmailAndPassword(auth, username, password);
-      setMessage("Login successful!");
-      navigate("/home"); // ✅ Navigate to /home
+      await createUserWithEmailAndPassword(auth, username, password);
+      setMessage("Signup successful!");
+      navigate("/home");
     } catch (error) {
-      setMessage("Login failed: " + error.message);
+      setMessage("Signup failed: " + error.message);
     }
   };
 
   return (
     <div className={styles.log}>
       <div className={styles.head}>
-        <h1>Login</h1>
+        <h1>SignUp</h1>
       </div>
       <div className={styles.form}>
         <form onSubmit={(e) => e.preventDefault()}>
@@ -44,27 +41,12 @@ function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </form>
-        <button id='logbtn' onClick={handleLogin}>Login</button>
+        <button onClick={handlesignup}>signup</button>
         <br />
-        
-            
-        <a 
-          href="/signup" 
-          style={{ 
-            marginTop: '10px', 
-            display: 'inline-block', 
-            textDecoration: 'none', 
-            color: '#0077ff',
-            fontWeight: 'bold'
-          }}
-          >
-  New User?  Sign Up
-</a>
-
         <p>{message}</p>
       </div>
     </div>
   );
 }
 
-export default Login;
+export default Signup;

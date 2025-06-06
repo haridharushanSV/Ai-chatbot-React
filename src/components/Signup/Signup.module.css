@@ -8,11 +8,9 @@
     font-weight: bold;
     color: #222;
 }
-
-* {
+*{
     overflow-y: hidden;
 }
-
 .log {
     background-color: rgba(242, 242, 235, 0.9);
     padding: 10px;
@@ -62,21 +60,12 @@
     transform: scale(1.05);
 }
 
-
-.newuser label {
+.form label {
     margin-top: 10px;
     font-size: 0.9rem;
-    color: #0077ff;
-    cursor: pointer;
+    color: #444;
 }
-.newuserbtn{
-    background-color: transparent;
-    border: none;
-    color: #0077ff;
-    font-size: 0.9rem;
-    cursor: pointer;
-    text-decoration: underline;
-}
+
 .form p {
     color: red;
     font-size: 0.9rem;
