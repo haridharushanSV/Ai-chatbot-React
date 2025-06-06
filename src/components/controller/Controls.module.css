@@ -5,6 +5,7 @@
     width: 100%;
 }
 
+
 .TextAreaContainer {
     flex-grow: 1;
     padding: 8px 16px;
@@ -18,7 +19,7 @@
     height: 100%;
     border: none;
     outline: none;
-    resize: none;
+    resize: none;color: #000;
     background: #ffffff;
 }
 
