@@ -1,12 +1,47 @@
-# React + Vite
+# 🤖 AI Chatbot with React & Firebase Authentication
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a responsive and interactive AI chatbot built using **React** for the frontend and **Firebase** for user authentication. Users can securely log in or sign up and interact with the chatbot, which can be powered by a backend AI model (e.g., OpenAI, Dialogflow, etc.).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🔐 User Authentication with Firebase (Email & Password)
+- 💬 Chatbot Interface with real-time messaging
+- 🔄 State Management using React Hooks and Context API
+- 📱 Responsive Design for mobile and desktop
+- 🌐 Secure Routes for authenticated users only
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React, HTML, CSS, JavaScript
+- **Authentication:** Firebase Authentication
+- **Chat Engine:** OpenAI API or custom backend
+- **Routing:** React Router
+- **State Management:** React Context API, useState, useEffect
+
+---
+
+## 📦 Installation
+```bash
+npm install
+
+npm i react-markdown
+
+npm install react-router-dom
+
+npm i @google/generative-ai --save
+
+npm install firebase
+
+npm install -g firebase-tools
+
+npm install --save react-toastify
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/ai-chatbot-react-firebase.git
+cd ai-chatbot-react-firebase
