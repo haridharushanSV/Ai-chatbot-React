@@ -39,9 +39,11 @@ npm install firebase
 npm install -g firebase-tools
 
 npm install --save react-toastify
+```
 
 ### 1. Clone the repository
 
 ```bash
 git clone https://github.com/your-username/ai-chatbot-react-firebase.git
 cd ai-chatbot-react-firebase
+```
